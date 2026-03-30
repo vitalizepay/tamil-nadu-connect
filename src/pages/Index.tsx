@@ -7,7 +7,7 @@ import ServicesSection from "@/components/ServicesSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import GallerySection from "@/components/GallerySection";
 import RegistrationForm from "@/components/RegistrationForm";
-import ComplaintForm from "@/components/ComplaintForm";
+
 import SocialSection from "@/components/SocialSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
