@@ -1,5 +1,4 @@
 import partyBanner from "@/assets/party-banner.png";
-import logo from "@/assets/mjmk-logo.png";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
