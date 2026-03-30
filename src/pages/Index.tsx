@@ -24,7 +24,7 @@ const Index = () => (
       <AchievementsSection />
       <GallerySection />
       <RegistrationForm />
-      <ComplaintForm />
+      
       <SocialSection />
       <ContactSection />
       <Footer />

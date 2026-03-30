@@ -13,7 +13,7 @@ const t = {
     title: "Founder & President",
     name: "S. Ibrahiem Bhathusha",
     role: "Founder & President – MJMK",
-    desc: "Founder and President of Makkal Jananayaka Munnetra Kazhagam. A dedicated Tamil Nadu political leader fighting for justice & equality for over 7+ years.",
+    desc: "Founder and President of Makkal Jananayaka Munnetra Kazhagam. A dedicated Tamil Nadu political leader fighting for justice & equality for over 9+ years.",
     quote: "\"A leader who fights for the rights of the people\"",
   },
 };

@@ -103,7 +103,7 @@ const content = {
       },
     ],
     journeyTitle: "Our Journey",
-    journey: "With 7+ years of continuous service, MJMK has grown into a trusted movement committed to public welfare, justice, and human dignity.",
+    journey: "With 9+ years of continuous service, MJMK has grown into a trusted movement committed to public welfare, justice, and human dignity.",
     conclusion: "MJMK is not just a political organization — It is a movement for rights, a voice for justice, and a force for humane governance.",
   },
 };

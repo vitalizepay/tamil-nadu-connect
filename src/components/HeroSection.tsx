@@ -13,7 +13,7 @@ const t = {
   en: {
     title: "Makkal Jananayaka Munnetra Kazhagam",
     subtitle: "MJMK - People's Democratic Progressive Party",
-    years: "7+ Years in Public Service",
+    years: "9+ Years in Public Service",
     join: "Join Us",
     help: "Get Help",
     ticker: "★ For the People \u00a0•\u00a0 For Justice \u00a0•\u00a0 For Fairness \u00a0★\u00a0 Public Service \u00a0•\u00a0 Human Rights \u00a0•\u00a0 Justice \u00a0★\u00a0 For the People \u00a0•\u00a0 For Justice \u00a0•\u00a0 For Fairness ★",
