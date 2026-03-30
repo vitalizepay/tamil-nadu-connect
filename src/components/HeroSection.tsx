@@ -1,4 +1,4 @@
-import heroBg from "@/assets/hero-bg.jpg";
+import partyBanner from "@/assets/party-banner.png";
 import logo from "@/assets/mjmk-logo.png";
 
 const HeroSection = () => {
@@ -8,16 +8,20 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <img src={heroBg} alt="MJMK Rally" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
-      <div className="absolute inset-0 gradient-hero-overlay" />
+      <div className="absolute inset-0 gradient-hero" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
-        <img src={logo} alt="MJMK Logo" className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-mjmk-cyan shadow-strong" />
+        <img src={logo} alt="MJMK Logo" className="w-28 h-28 mx-auto mb-4 rounded-full border-4 border-mjmk-cyan shadow-strong" />
+
+        {/* Party Banner */}
+        <div className="mb-6 rounded-xl overflow-hidden shadow-strong max-w-3xl mx-auto">
+          <img src={partyBanner} alt="MJMK - மக்கள் ஜனநாயக முன்னேற்ற கழகம்" className="w-full h-auto" />
+        </div>
         
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground leading-tight mb-4">
           மக்கள் ஜனநாயக முன்னேற்ற கழகம்
         </h1>
-        <p className="text-xl md:text-2xl font-bold text-mjmk-cyan mb-2">MJMK</p>
+        <p className="text-xl md:text-2xl font-bold text-mjmk-cyan mb-2">MAKKAL JANANAYAKA MUNNETRA KAZHAGAM</p>
         <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
           7+ ஆண்டுகளாக மக்கள் சேவையில்
         </p>
