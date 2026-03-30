@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 gradient-hero" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
-        <img src={logo} alt="MJMK Logo" className="w-28 h-28 mx-auto mb-4 rounded-full border-4 border-mjmk-cyan shadow-strong" />
+        
 
         {/* Party Banner */}
         <div className="mb-6 rounded-xl overflow-hidden shadow-strong max-w-3xl mx-auto">

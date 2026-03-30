@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import logo from "@/assets/mjmk-logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const navLinks = [
   { label: "முகப்பு", href: "#hero" },
