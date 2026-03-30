@@ -5,7 +5,7 @@ const t = {
   ta: {
     title: "எங்கள் சாதனைகள்",
     stats: [
-      { value: 7, suffix: "+", label: "ஆண்டுகள் சேவை" },
+      { value: 9, suffix: "+", label: "ஆண்டுகள் சேவை" },
       { value: 1000, suffix: "+", label: "மக்கள் உதவி" },
       { value: 500, suffix: "+", label: "பிரச்சினைகள் தீர்வு" },
     ],
