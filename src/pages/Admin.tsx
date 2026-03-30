@@ -8,6 +8,7 @@ interface Registration {
   name: string;
   mobile: string;
   district: string;
+  address: string | null;
   age: number | null;
   occupation: string | null;
   email: string | null;
@@ -61,6 +62,7 @@ const Admin = () => {
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Name</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Mobile</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">District</th>
+                  <th className="px-4 py-3 text-sm font-bold text-foreground">Address</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Age</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Occupation</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Email</th>
@@ -75,6 +77,7 @@ const Admin = () => {
                     <td className="px-4 py-3 text-sm font-semibold text-foreground">{r.name}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.mobile}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.district}</td>
+                    <td className="px-4 py-3 text-sm text-foreground">{r.address ?? "-"}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.age ?? "-"}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.occupation ?? "-"}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.email ?? "-"}</td>

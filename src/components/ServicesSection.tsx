@@ -35,8 +35,8 @@ const ServicesSection = () => {
         <div className="w-24 h-1 bg-secondary-foreground/30 mx-auto mb-12 rounded-full" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {c.services.map((s, i) => (
-            <div key={i} className="bg-background/10 backdrop-blur-sm rounded-xl p-6 text-center hover:scale-105 transition-transform border border-secondary-foreground/20">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary-foreground/20 flex items-center justify-center">
+            <div key={i} className="group bg-background/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:scale-105 hover:bg-background/20 transition-all duration-300 border border-secondary-foreground/20 hover:border-secondary-foreground/40 hover:shadow-lg">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-secondary-foreground/20 flex items-center justify-center group-hover:bg-secondary-foreground/30 transition-colors">
                 <s.icon size={32} className="text-secondary-foreground" />
               </div>
               <h3 className="text-xl font-bold mb-2">{s.title}</h3>

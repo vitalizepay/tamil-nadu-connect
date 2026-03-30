@@ -5,7 +5,7 @@ const t = {
   ta: {
     title: "எங்கள் சாதனைகள்",
     stats: [
-      { value: 7, suffix: "+", label: "ஆண்டுகள் சேவை" },
+      { value: 9, suffix: "+", label: "ஆண்டுகள் சேவை" },
       { value: 1000, suffix: "+", label: "மக்கள் உதவி" },
       { value: 500, suffix: "+", label: "பிரச்சினைகள் தீர்வு" },
     ],
@@ -13,7 +13,7 @@ const t = {
   en: {
     title: "Our Achievements",
     stats: [
-      { value: 7, suffix: "+", label: "Years of Service" },
+      { value: 9, suffix: "+", label: "Years of Service" },
       { value: 1000, suffix: "+", label: "People Helped" },
       { value: 500, suffix: "+", label: "Issues Resolved" },
     ],
@@ -58,13 +58,14 @@ const AchievementsSection = () => {
   const c = t[lang];
 
   return (
-    <section id="achievements" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="achievements" className="py-20 bg-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl md:text-4xl font-black text-center text-foreground mb-4">{c.title}</h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-12 rounded-full" />
         <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {c.stats.map((s, i) => (
-            <div key={i} className="text-center p-8 rounded-xl shadow-card bg-muted">
+            <div key={i} className="text-center p-8 rounded-2xl shadow-card bg-muted border border-border/50 hover:shadow-strong transition-shadow duration-300">
               <Counter target={s.value} suffix={s.suffix} />
               <p className="text-lg font-bold text-foreground mt-3">{s.label}</p>
             </div>

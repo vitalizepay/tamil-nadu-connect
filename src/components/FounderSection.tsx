@@ -6,14 +6,14 @@ const t = {
     title: "நிறுவனர் & தலைவர்",
     name: "எஸ்.இப்ராஹீம்பாதுஷா",
     role: "நிறுவனர் & தலைவர் – MJMK",
-    desc: "மக்கள் ஜனநாயக முன்னேற்ற கழகத்தின் நிறுவனர் மற்றும் தலைவர். தமிழ்நாடு மக்களின் உரிமைக்காகவும் நீதிக்காகவும் 7+ ஆண்டுகளாக போராடும் தலைவர்.",
+    desc: "மக்கள் ஜனநாயக முன்னேற்ற கழகத்தின் நிறுவனர் மற்றும் தலைவர். தமிழ்நாடு மக்களின் உரிமைக்காகவும் நீதிக்காகவும் 9+ ஆண்டுகளாக போராடும் தலைவர்.",
     quote: "\"மக்களின் உரிமைக்காக போராடும் தலைவர்\"",
   },
   en: {
     title: "Founder & President",
     name: "S. Ibrahiem Bhathusha",
     role: "Founder & President – MJMK",
-    desc: "Founder and President of Makkal Jananayaka Munnetra Kazhagam. A dedicated Tamil Nadu political leader fighting for justice & equality for over 7+ years.",
+    desc: "Founder and President of Makkal Jananayaka Munnetra Kazhagam. A dedicated Tamil Nadu political leader fighting for justice & equality for over 9+ years.",
     quote: "\"A leader who fights for the rights of the people\"",
   },
 };

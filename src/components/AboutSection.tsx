@@ -7,7 +7,7 @@ const content = {
     subtitle: "மக்கள் ஜனநாயக முன்னேற்ற கழகம் (MJMK)",
     intro: [
       "மக்கள் ஜனநாயக முன்னேற்ற கழகம் (MJMK) என்பது தமிழ்நாட்டில் சாதாரண மக்களின் உரிமைகளை பாதுகாக்க உருவாக்கப்பட்ட மக்கள் மைய அரசியல் இயக்கமாகும்.",
-      "7 ஆண்டுகளுக்கும் மேலாக, குரல் இல்லாத மக்களுக்கு குரலாக இருந்து, நியாயத்திற்காக தொடர்ந்து செயல்பட்டு வருகிறோம்.",
+      "9 ஆண்டுகளுக்கும் மேலாக, குரல் இல்லாத மக்களுக்கு குரலாக இருந்து, நியாயத்திற்காக தொடர்ந்து செயல்பட்டு வருகிறோம்.",
     ],
     quote: "\"மக்கள் நலன் எங்கள் முதன்மை\"",
     quoteDesc: "என்பது எங்கள் அடிப்படை கொள்கை. மக்களின் மரியாதை, பாதுகாப்பு மற்றும் உரிமைகள் எந்த சூழ்நிலையிலும் பாதிக்கப்படக்கூடாது என்பதில் நாங்கள் உறுதியாக உள்ளோம்.",
@@ -51,7 +51,7 @@ const content = {
       },
     ],
     journeyTitle: "எங்கள் பயணம்",
-    journey: "7+ ஆண்டுகளாக தொடர்ந்து மக்கள் சேவையில் ஈடுபட்டு, நம்பிக்கையுடன் வளர்ந்து வரும் இயக்கமாக உள்ளோம். ஒவ்வொரு குடிமகனும் பாதுகாப்பாகவும் மரியாதையுடனும் வாழும் சமூகத்தை உருவாக்குவதே எங்கள் நோக்கம்.",
+    journey: "9+ ஆண்டுகளாக தொடர்ந்து மக்கள் சேவையில் ஈடுபட்டு, நம்பிக்கையுடன் வளர்ந்து வரும் இயக்கமாக உள்ளோம். ஒவ்வொரு குடிமகனும் பாதுகாப்பாகவும் மரியாதையுடனும் வாழும் சமூகத்தை உருவாக்குவதே எங்கள் நோக்கம்.",
     conclusion: "MJMK ஒரு அரசியல் அமைப்பு மட்டுமல்ல — இது உரிமைகளுக்கான இயக்கம், நீதிக்கான குரல், மனிதநேய ஆட்சிக்கான சக்தி.",
   },
   en: {
@@ -59,7 +59,7 @@ const content = {
     subtitle: "Makkal Jananayaka Munnetra Kazhagam (MJMK)",
     intro: [
       "Makkal Jananayaka Munnetra Kazhagam (MJMK) is a people-centric political movement dedicated to protecting the rights of common citizens across Tamil Nadu.",
-      "For over 7 years, we have stood as a strong voice for the voiceless and continue to fight for justice and dignity.",
+      "For over 9 years, we have stood as a strong voice for the voiceless and continue to fight for justice and dignity.",
     ],
     quote: "\"People's Welfare is Our Priority\"",
     quoteDesc: "is the core principle that drives our mission.",
@@ -103,7 +103,7 @@ const content = {
       },
     ],
     journeyTitle: "Our Journey",
-    journey: "With 7+ years of continuous service, MJMK has grown into a trusted movement committed to public welfare, justice, and human dignity.",
+    journey: "With 9+ years of continuous service, MJMK has grown into a trusted movement committed to public welfare, justice, and human dignity.",
     conclusion: "MJMK is not just a political organization — It is a movement for rights, a voice for justice, and a force for humane governance.",
   },
 };

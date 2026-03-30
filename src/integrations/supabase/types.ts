@@ -16,6 +16,7 @@ export type Database = {
     Tables: {
       registrations: {
         Row: {
+          address: string | null
           age: number | null
           created_at: string
           district: string
@@ -27,6 +28,7 @@ export type Database = {
           occupation: string | null
         }
         Insert: {
+          address?: string | null
           age?: number | null
           created_at?: string
           district: string
@@ -38,6 +40,7 @@ export type Database = {
           occupation?: string | null
         }
         Update: {
+          address?: string | null
           age?: number | null
           created_at?: string
           district?: string

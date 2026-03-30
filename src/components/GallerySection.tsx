@@ -39,10 +39,10 @@ const GallerySection = () => {
         <div className="w-24 h-1 bg-primary mx-auto mb-12 rounded-full" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {c.images.map((img, i) => (
-            <div key={i} className="group relative overflow-hidden rounded-xl shadow-card">
-              <img src={img.src} alt={img.label} loading="lazy" width={800} height={600} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-foreground/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <p className="text-primary-foreground font-bold text-xl">{img.label}</p>
+            <div key={i} className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-strong transition-shadow duration-300">
+              <img src={img.src} alt={img.label} loading="lazy" width={800} height={600} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                <p className="text-primary-foreground font-bold text-xl drop-shadow-lg">{img.label}</p>
               </div>
             </div>
           ))}

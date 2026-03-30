@@ -5,7 +5,7 @@ const t = {
   ta: {
     title: "மக்கள் ஜனநாயக முன்னேற்ற கழகம்",
     subtitle: "MAKKAL JANANAYAKA MUNNETRA KAZHAGAM",
-    years: "7+ ஆண்டுகளாக மக்கள் சேவையில்",
+    years: "9+ ஆண்டுகளாக மக்கள் சேவையில்",
     join: "இணைந்திடுங்கள்",
     help: "உதவி பெறுங்கள்",
     ticker: "★ மக்களுக்காக \u00a0•\u00a0 நீதிக்காக \u00a0•\u00a0 நியாயத்திற்காக \u00a0★\u00a0 மக்கள் சேவை \u00a0•\u00a0 மனித உரிமை \u00a0•\u00a0 நியாயம் \u00a0★\u00a0 மக்களுக்காக \u00a0•\u00a0 நீதிக்காக \u00a0•\u00a0 நியாயத்திற்காக ★",
@@ -13,7 +13,7 @@ const t = {
   en: {
     title: "Makkal Jananayaka Munnetra Kazhagam",
     subtitle: "MJMK - People's Democratic Progressive Party",
-    years: "7+ Years in Public Service",
+    years: "9+ Years in Public Service",
     join: "Join Us",
     help: "Get Help",
     ticker: "★ For the People \u00a0•\u00a0 For Justice \u00a0•\u00a0 For Fairness \u00a0★\u00a0 Public Service \u00a0•\u00a0 Human Rights \u00a0•\u00a0 Justice \u00a0★\u00a0 For the People \u00a0•\u00a0 For Justice \u00a0•\u00a0 For Fairness ★",
