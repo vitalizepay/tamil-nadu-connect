@@ -59,7 +59,7 @@ const content = {
     subtitle: "Makkal Jananayaka Munnetra Kazhagam (MJMK)",
     intro: [
       "Makkal Jananayaka Munnetra Kazhagam (MJMK) is a people-centric political movement dedicated to protecting the rights of common citizens across Tamil Nadu.",
-      "For over 7 years, we have stood as a strong voice for the voiceless and continue to fight for justice and dignity.",
+      "For over 9 years, we have stood as a strong voice for the voiceless and continue to fight for justice and dignity.",
     ],
     quote: "\"People's Welfare is Our Priority\"",
     quoteDesc: "is the core principle that drives our mission.",
