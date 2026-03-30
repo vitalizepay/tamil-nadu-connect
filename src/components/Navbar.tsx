@@ -15,6 +15,7 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { lang, toggle } = useLanguage();
 
   const scrollTo = (href: string) => {
     setOpen(false);
