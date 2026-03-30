@@ -62,6 +62,7 @@ const Admin = () => {
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Name</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Mobile</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">District</th>
+                  <th className="px-4 py-3 text-sm font-bold text-foreground">Address</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Age</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Occupation</th>
                   <th className="px-4 py-3 text-sm font-bold text-foreground">Email</th>
