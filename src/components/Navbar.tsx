@@ -51,9 +51,17 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="lg:hidden text-primary-foreground p-2">
-          {open ? <X size={28} /> : <Menu size={28} />}
+        <div className="flex items-center gap-2 lg:hidden">
+          <button
+            onClick={toggle}
+            className="text-mjmk-cyan border border-mjmk-cyan/40 rounded px-2 py-1 text-xs font-bold"
+          >
+            {lang === "ta" ? "EN" : "தமிழ்"}
+          </button>
+          <button onClick={() => setOpen(!open)} className="text-primary-foreground p-2">
+            {open ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
         </button>
       </div>
 
