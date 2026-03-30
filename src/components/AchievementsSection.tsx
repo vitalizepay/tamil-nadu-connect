@@ -13,7 +13,7 @@ const t = {
   en: {
     title: "Our Achievements",
     stats: [
-      { value: 7, suffix: "+", label: "Years of Service" },
+      { value: 9, suffix: "+", label: "Years of Service" },
       { value: 1000, suffix: "+", label: "People Helped" },
       { value: 500, suffix: "+", label: "Issues Resolved" },
     ],
