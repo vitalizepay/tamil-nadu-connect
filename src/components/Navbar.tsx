@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import logo from "@/assets/mjmk-logo.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const navLinks = [
   { label: "முகப்பு", href: "#hero" },
@@ -14,6 +15,7 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { lang, toggle } = useLanguage();
 
   const scrollTo = (href: string) => {
     setOpen(false);
@@ -40,12 +42,26 @@ const Navbar = () => {
               {l.label}
             </button>
           ))}
+          <button
+            onClick={toggle}
+            className="ml-2 flex items-center gap-1 px-3 py-2 text-sm font-bold text-mjmk-cyan border border-mjmk-cyan/40 rounded hover:bg-primary/30 transition-colors"
+          >
+            <Globe size={16} />
+            {lang === "ta" ? "EN" : "தமிழ்"}
+          </button>
         </div>
 
-        {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className="lg:hidden text-primary-foreground p-2">
-          {open ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <button
+            onClick={toggle}
+            className="text-mjmk-cyan border border-mjmk-cyan/40 rounded px-2 py-1 text-xs font-bold"
+          >
+            {lang === "ta" ? "EN" : "தமிழ்"}
+          </button>
+          <button onClick={() => setOpen(!open)} className="text-primary-foreground p-2">
+            {open ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

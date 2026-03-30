@@ -1,3 +1,4 @@
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -13,21 +14,23 @@ import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 
 const Index = () => (
-  <div className="min-h-screen">
-    <Navbar />
-    <HeroSection />
-    <AboutSection />
-    <FounderSection />
-    <ServicesSection />
-    <AchievementsSection />
-    <GallerySection />
-    <RegistrationForm />
-    <ComplaintForm />
-    <SocialSection />
-    <ContactSection />
-    <Footer />
-    <FloatingButtons />
-  </div>
+  <LanguageProvider>
+    <div className="min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <FounderSection />
+      <ServicesSection />
+      <AchievementsSection />
+      <GallerySection />
+      <RegistrationForm />
+      <ComplaintForm />
+      <SocialSection />
+      <ContactSection />
+      <Footer />
+      <FloatingButtons />
+    </div>
+  </LanguageProvider>
 );
 
 export default Index;
