@@ -1,11 +1,15 @@
-import galleryService from "@/assets/gallery-service.jpg";
 import galleryMeeting from "@/assets/gallery-meeting.jpg";
+import galleryService from "@/assets/gallery-service.jpg";
 import galleryCampaign from "@/assets/gallery-campaign.jpg";
+import galleryEvent1 from "@/assets/gallery-event1.jpg";
+import galleryEvent2 from "@/assets/gallery-event2.jpg";
 
 const images = [
-  { src: galleryMeeting, label: "பொதுக் கூட்டங்கள்", cat: "Public Meetings" },
-  { src: galleryService, label: "சமூக சேவை", cat: "Social Work" },
-  { src: galleryCampaign, label: "பிரச்சாரங்கள்", cat: "Campaigns" },
+  { src: galleryMeeting, label: "தலைவர்கள் சந்திப்பு", cat: "Leaders Meeting" },
+  { src: galleryService, label: "மக்கள் சேவை", cat: "Public Service" },
+  { src: galleryCampaign, label: "சிறப்பு நிகழ்வு", cat: "Special Event" },
+  { src: galleryEvent1, label: "அரசியல் கூட்டம்", cat: "Political Meeting" },
+  { src: galleryEvent2, label: "பிரச்சாரம்", cat: "Campaign Rally" },
 ];
 
 const GallerySection = () => (

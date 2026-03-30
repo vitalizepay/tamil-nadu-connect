@@ -40,10 +40,10 @@
     --mjmk-red: 0 72% 51%;
     --mjmk-green: 125 53% 33%;
     --mjmk-blue: 211 71% 46%;
-    --mjmk-cyan: 181 63% 57%;
+    --mjmk-cyan: 193 70% 65%;
     --mjmk-black: 0 0% 0%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(0 72% 51%), hsl(0 0% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 72% 40%), hsl(125 53% 25%), hsl(0 0% 8%));
     --gradient-hero-overlay: linear-gradient(180deg, hsla(0,0%,0%,0.7), hsla(0,72%,51%,0.4));
     --gradient-green: linear-gradient(135deg, hsl(125 53% 33%), hsl(125 53% 25%));
     --gradient-red-btn: linear-gradient(135deg, hsl(0 72% 51%), hsl(0 72% 40%));
