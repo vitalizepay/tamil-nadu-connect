@@ -8,6 +8,7 @@ interface Registration {
   name: string;
   mobile: string;
   district: string;
+  address: string | null;
   age: number | null;
   occupation: string | null;
   email: string | null;
