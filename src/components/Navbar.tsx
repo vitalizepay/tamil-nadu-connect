@@ -42,6 +42,13 @@ const Navbar = () => {
               {l.label}
             </button>
           ))}
+          <button
+            onClick={toggle}
+            className="ml-2 flex items-center gap-1 px-3 py-2 text-sm font-bold text-mjmk-cyan border border-mjmk-cyan/40 rounded hover:bg-primary/30 transition-colors"
+          >
+            <Globe size={16} />
+            {lang === "ta" ? "EN" : "தமிழ்"}
+          </button>
         </div>
 
         {/* Mobile toggle */}
