@@ -3,24 +3,37 @@ import { Menu, X, Globe } from "lucide-react";
 import logo from "@/assets/mjmk-logo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const navLinks = [
-  { label: "முகப்பு", href: "#hero" },
-  { label: "எங்களை பற்றி", href: "#about" },
-  { label: "சேவைகள்", href: "#services" },
-  { label: "சாதனைகள்", href: "#achievements" },
-  { label: "தொகுப்பு", href: "#gallery" },
-  { label: "இணைக", href: "#register" },
-  { label: "தொடர்பு", href: "#contact" },
-];
+const navLinks = {
+  ta: [
+    { label: "முகப்பு", href: "#hero" },
+    { label: "எங்களை பற்றி", href: "#about" },
+    { label: "நிறுவனர்", href: "#founder" },
+    { label: "சேவைகள்", href: "#services" },
+    { label: "சாதனைகள்", href: "#achievements" },
+    { label: "தொகுப்பு", href: "#gallery" },
+    { label: "இணைக", href: "#register" },
+    { label: "தொடர்பு", href: "#contact" },
+  ],
+  en: [
+    { label: "Home", href: "#hero" },
+    { label: "About", href: "#about" },
+    { label: "Founder", href: "#founder" },
+    { label: "Services", href: "#services" },
+    { label: "Achievements", href: "#achievements" },
+    { label: "Gallery", href: "#gallery" },
+    { label: "Join", href: "#register" },
+    { label: "Contact", href: "#contact" },
+  ],
+};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { lang, toggle } = useLanguage();
+  const links = navLinks[lang];
 
   const scrollTo = (href: string) => {
     setOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -31,9 +44,8 @@ const Navbar = () => {
           <span className="text-lg font-bold text-primary-foreground hidden sm:block">MJMK</span>
         </button>
 
-        {/* Desktop */}
         <div className="hidden lg:flex items-center gap-1">
-          {navLinks.map((l) => (
+          {links.map((l) => (
             <button
               key={l.href}
               onClick={() => scrollTo(l.href)}
@@ -64,10 +76,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="lg:hidden gradient-hero border-t border-primary/20 pb-4">
-          {navLinks.map((l) => (
+          {links.map((l) => (
             <button
               key={l.href}
               onClick={() => scrollTo(l.href)}
