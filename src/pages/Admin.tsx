@@ -77,6 +77,7 @@ const Admin = () => {
                     <td className="px-4 py-3 text-sm font-semibold text-foreground">{r.name}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.mobile}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.district}</td>
+                    <td className="px-4 py-3 text-sm text-foreground">{r.address ?? "-"}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.age ?? "-"}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.occupation ?? "-"}</td>
                     <td className="px-4 py-3 text-sm text-foreground">{r.email ?? "-"}</td>
