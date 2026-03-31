@@ -1,4 +1,7 @@
 import founderImg from "@/assets/founder.png";
+import vishnuImg from "@/assets/leader-vishnu.png";
+import farookImg from "@/assets/leader-farook.png";
+import akkimImg from "@/assets/leader-akkim.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const t = {
@@ -8,6 +11,24 @@ const t = {
     role: "நிறுவனர் & தலைவர் – MJMK",
     desc: "மக்கள் ஜனநாயக முன்னேற்ற கழகத்தின் நிறுவனர் மற்றும் தலைவர். தமிழ்நாடு மக்களின் உரிமைக்காகவும் நீதிக்காகவும் 9+ ஆண்டுகளாக போராடும் தலைவர்.",
     quote: "\"மக்களின் உரிமைக்காக போராடும் தலைவர்\"",
+    teamTitle: "கழக நிர்வாகிகள்",
+    leaders: [
+      {
+        name: "கோ விஷ்ணு லட்சுமணன்",
+        role: "கழகப் பொதுச் செயலாளர் மற்றும் கோவை மாநகர மாவட்ட செயலாளர்",
+        img: vishnuImg,
+      },
+      {
+        name: "A.முகமது பாரூக்",
+        role: "கழகத் தலைமை நிலைய செயலாளர்",
+        img: farookImg,
+      },
+      {
+        name: "Akkim",
+        role: "கழக அமைப்புச் செயலாளர்",
+        img: akkimImg,
+      },
+    ],
   },
   en: {
     title: "Founder & President",
@@ -15,6 +36,24 @@ const t = {
     role: "Founder & President – MJMK",
     desc: "Founder and President of Makkal Jananayaka Munnetra Kazhagam. A dedicated Tamil Nadu political leader fighting for justice & equality for over 9+ years.",
     quote: "\"A leader who fights for the rights of the people\"",
+    teamTitle: "Party Office Bearers",
+    leaders: [
+      {
+        name: "Ko. Vishnu Lakshmanan",
+        role: "General Secretary & Coimbatore City District Secretary",
+        img: vishnuImg,
+      },
+      {
+        name: "A. Muhammad Farook",
+        role: "Headquarters Secretary",
+        img: farookImg,
+      },
+      {
+        name: "Akkim",
+        role: "Organization Secretary",
+        img: akkimImg,
+      },
+    ],
   },
 };
 
@@ -25,6 +64,7 @@ const FounderSection = () => {
   return (
     <section id="founder" className="py-20 gradient-hero">
       <div className="container mx-auto px-4">
+        {/* Founder */}
         <h2 className="text-3xl md:text-4xl font-black text-center text-primary-foreground mb-4">{c.title}</h2>
         <div className="w-24 h-1 bg-mjmk-cyan mx-auto mb-10 rounded-full" />
         <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8">
@@ -37,6 +77,24 @@ const FounderSection = () => {
             <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6">{c.desc}</p>
             <p className="text-2xl font-black text-mjmk-cyan italic">{c.quote}</p>
           </div>
+        </div>
+
+        {/* Team Leaders */}
+        <h2 className="text-3xl md:text-4xl font-black text-center text-primary-foreground mt-20 mb-4">{c.teamTitle}</h2>
+        <div className="w-24 h-1 bg-mjmk-cyan mx-auto mb-10 rounded-full" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {c.leaders.map((leader, i) => (
+            <div
+              key={i}
+              className="flex flex-col items-center bg-background/10 backdrop-blur-sm rounded-2xl p-6 border border-mjmk-cyan/30 hover:border-mjmk-cyan transition-all duration-300 hover:scale-105"
+            >
+              <div className="w-40 h-40 rounded-full border-4 border-mjmk-cyan shadow-strong overflow-hidden mb-4">
+                <img src={leader.img} alt={leader.name} className="w-full h-full object-cover object-top" />
+              </div>
+              <h3 className="text-xl font-black text-primary-foreground text-center mb-2">{leader.name}</h3>
+              <p className="text-mjmk-cyan font-bold text-sm text-center">{leader.role}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
