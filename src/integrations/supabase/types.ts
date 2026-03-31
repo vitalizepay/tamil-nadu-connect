@@ -14,6 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
+      complaints: {
+        Row: {
+          bank_name: string
+          comments: string
+          complaint_id: string
+          complaint_type: string
+          created_at: string
+          district: string
+          email: string
+          file_url: string | null
+          id: string
+          name: string
+          phone: string
+          status: string
+        }
+        Insert: {
+          bank_name: string
+          comments: string
+          complaint_id: string
+          complaint_type: string
+          created_at?: string
+          district: string
+          email: string
+          file_url?: string | null
+          id?: string
+          name: string
+          phone: string
+          status?: string
+        }
+        Update: {
+          bank_name?: string
+          comments?: string
+          complaint_id?: string
+          complaint_type?: string
+          created_at?: string
+          district?: string
+          email?: string
+          file_url?: string | null
+          id?: string
+          name?: string
+          phone?: string
+          status?: string
+        }
+        Relationships: []
+      }
       registrations: {
         Row: {
           address: string | null
