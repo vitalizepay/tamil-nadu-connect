@@ -26,6 +26,7 @@ const Index = () => (
       <RegistrationForm />
       
       <SocialSection />
+      <ComplaintForm />
       <ContactSection />
       <Footer />
       <FloatingButtons />
