@@ -2,6 +2,11 @@ import founderImg from "@/assets/founder.png";
 import vishnuImg from "@/assets/leader-vishnu.png";
 import farookImg from "@/assets/leader-farook.png";
 import akkimImg from "@/assets/leader-akkim.png";
+import sabithaImg from "@/assets/leader-sabitha.png";
+import vishnuLImg from "@/assets/leader-vishnu-l.png";
+import prakashImg from "@/assets/leader-prakash.png";
+import rahimImg from "@/assets/leader-rahim.png";
+import senthilImg from "@/assets/leader-senthil.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const t = {
@@ -13,21 +18,14 @@ const t = {
     quote: "\"மக்களின் உரிமைக்காக போராடும் தலைவர்\"",
     teamTitle: "கழக நிர்வாகிகள்",
     leaders: [
-      {
-        name: "கோ விஷ்ணு லட்சுமணன்",
-        role: "கழகப் பொதுச் செயலாளர் மற்றும் கோவை மாநகர மாவட்ட செயலாளர்",
-        img: vishnuImg,
-      },
-      {
-        name: "A.முகமது பாரூக்",
-        role: "கழகத் தலைமை நிலைய செயலாளர்",
-        img: farookImg,
-      },
-      {
-        name: "Akkim",
-        role: "கழக அமைப்புச் செயலாளர்",
-        img: akkimImg,
-      },
+      { name: "கோ விஷ்ணு லட்சுமணன்", role: "கழகப் பொதுச் செயலாளர் மற்றும் கோவை மாநகர மாவட்ட செயலாளர்", img: vishnuImg },
+      { name: "A.முகமது பாரூக்", role: "கழகத் தலைமை நிலைய செயலாளர்", img: farookImg },
+      { name: "Akkim", role: "கழக அமைப்புச் செயலாளர்", img: akkimImg },
+      { name: "V. சபிதா ராணி", role: "கழக கொள்கை பரப்புச் செயலாளர்", img: sabithaImg },
+      { name: "G. விஷ்ணு லட்சுமணன்", role: "கழக அவைத் தலைவர்", img: vishnuLImg },
+      { name: "கா.பிரகாஷ்", role: "கழக முதன்மை செயலாளர்", img: prakashImg },
+      { name: "ஜா.ரஹீம்", role: "கழக ஒருங்கிணைப்பாளர்", img: rahimImg },
+      { name: "S செந்தில்குமார்", role: "கழக மேற்கு மண்டல செயலாளர்", img: senthilImg },
     ],
   },
   en: {
@@ -38,21 +36,14 @@ const t = {
     quote: "\"A leader who fights for the rights of the people\"",
     teamTitle: "Party Office Bearers",
     leaders: [
-      {
-        name: "Ko. Vishnu Lakshmanan",
-        role: "General Secretary & Coimbatore City District Secretary",
-        img: vishnuImg,
-      },
-      {
-        name: "A. Muhammad Farook",
-        role: "Headquarters Secretary",
-        img: farookImg,
-      },
-      {
-        name: "Akkim",
-        role: "Organization Secretary",
-        img: akkimImg,
-      },
+      { name: "Ko. Vishnu Lakshmanan", role: "General Secretary & Coimbatore City District Secretary", img: vishnuImg },
+      { name: "A. Muhammad Farook", role: "Headquarters Secretary", img: farookImg },
+      { name: "Akkim", role: "Organization Secretary", img: akkimImg },
+      { name: "V. Sabitha Rani", role: "Policy Propagation Secretary", img: sabithaImg },
+      { name: "G. Vishnu Lakshmanan", role: "Party Speaker", img: vishnuLImg },
+      { name: "Ka. Prakash", role: "Chief Secretary", img: prakashImg },
+      { name: "Ja. Rahim", role: "Party Coordinator", img: rahimImg },
+      { name: "S. Senthilkumar", role: "Western Zone Secretary", img: senthilImg },
     ],
   },
 };
@@ -82,17 +73,17 @@ const FounderSection = () => {
         {/* Team Leaders */}
         <h2 className="text-3xl md:text-4xl font-black text-center text-primary-foreground mt-20 mb-4">{c.teamTitle}</h2>
         <div className="w-24 h-1 bg-mjmk-cyan mx-auto mb-10 rounded-full" />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {c.leaders.map((leader, i) => (
             <div
               key={i}
               className="flex flex-col items-center bg-background/10 backdrop-blur-sm rounded-2xl p-6 border border-mjmk-cyan/30 hover:border-mjmk-cyan transition-all duration-300 hover:scale-105"
             >
-              <div className="w-40 h-40 rounded-full border-4 border-mjmk-cyan shadow-strong overflow-hidden mb-4">
+              <div className="w-36 h-36 rounded-full border-4 border-mjmk-cyan shadow-strong overflow-hidden mb-4">
                 <img src={leader.img} alt={leader.name} className="w-full h-full object-cover object-top" />
               </div>
-              <h3 className="text-xl font-black text-primary-foreground text-center mb-2">{leader.name}</h3>
-              <p className="text-mjmk-cyan font-bold text-sm text-center">{leader.role}</p>
+              <h3 className="text-lg font-black text-primary-foreground text-center mb-2">{leader.name}</h3>
+              <p className="text-mjmk-cyan font-bold text-xs text-center">{leader.role}</p>
             </div>
           ))}
         </div>
