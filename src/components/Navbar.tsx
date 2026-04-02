@@ -37,59 +37,68 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 gradient-hero border-b-2 border-primary/30">
-      <div className="container mx-auto flex items-center justify-between px-4 py-2">
-        <button onClick={() => scrollTo("#hero")} className="flex items-center gap-2">
-          <img src={logo} alt="MJMK Logo" className="h-12 w-12 rounded-full border-2 border-mjmk-cyan" />
-          <span className="text-lg font-bold text-primary-foreground hidden sm:block">MJMK</span>
-        </button>
-
-        <div className="hidden lg:flex items-center gap-1">
-          {links.map((l) => (
-            <button
-              key={l.href}
-              onClick={() => scrollTo(l.href)}
-              className="px-3 py-2 text-sm font-semibold text-primary-foreground/90 hover:text-primary-foreground hover:bg-primary/30 rounded transition-colors"
-            >
-              {l.label}
-            </button>
-          ))}
-          <button
-            onClick={toggle}
-            className="ml-2 flex items-center gap-1 px-3 py-2 text-sm font-bold text-mjmk-cyan border border-mjmk-cyan/40 rounded hover:bg-primary/30 transition-colors"
-          >
-            <Globe size={16} />
-            {lang === "ta" ? "EN" : "தமிழ்"}
-          </button>
-        </div>
-
-        <div className="flex items-center gap-2 lg:hidden">
-          <button
-            onClick={toggle}
-            className="text-mjmk-cyan border border-mjmk-cyan/40 rounded px-2 py-1 text-xs font-bold"
-          >
-            {lang === "ta" ? "EN" : "தமிழ்"}
-          </button>
-          <button onClick={() => setOpen(!open)} className="text-primary-foreground p-2">
-            {open ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
+    <>
+      {/* Flag color stripe - Red, Green, Blue */}
+      <div className="fixed top-0 left-0 right-0 z-[60] flex h-1.5">
+        <div className="flex-1 bg-primary" />
+        <div className="flex-1 bg-secondary" />
+        <div className="flex-1 bg-accent" />
       </div>
 
-      {open && (
-        <div className="lg:hidden gradient-hero border-t border-primary/20 pb-4">
-          {links.map((l) => (
+      <nav className="fixed top-1.5 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-sm">
+        <div className="container mx-auto flex items-center justify-between px-4 py-2">
+          <button onClick={() => scrollTo("#hero")} className="flex items-center gap-2">
+            <img src={logo} alt="MJMK Logo" className="h-11 w-11 rounded-full border-2 border-accent" />
+            <span className="text-lg font-black text-accent hidden sm:block">MJMK</span>
+          </button>
+
+          <div className="hidden lg:flex items-center gap-1">
+            {links.map((l) => (
+              <button
+                key={l.href}
+                onClick={() => scrollTo(l.href)}
+                className="px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
+              >
+                {l.label}
+              </button>
+            ))}
             <button
-              key={l.href}
-              onClick={() => scrollTo(l.href)}
-              className="block w-full text-left px-6 py-3 text-primary-foreground font-semibold hover:bg-primary/30 transition-colors"
+              onClick={toggle}
+              className="ml-2 flex items-center gap-1 px-3 py-2 text-sm font-bold text-accent border border-accent/30 rounded-lg hover:bg-accent/10 transition-colors"
             >
-              {l.label}
+              <Globe size={16} />
+              {lang === "ta" ? "EN" : "தமிழ்"}
             </button>
-          ))}
+          </div>
+
+          <div className="flex items-center gap-2 lg:hidden">
+            <button
+              onClick={toggle}
+              className="text-accent border border-accent/30 rounded px-2 py-1 text-xs font-bold"
+            >
+              {lang === "ta" ? "EN" : "தமிழ்"}
+            </button>
+            <button onClick={() => setOpen(!open)} className="text-foreground p-2">
+              {open ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
-      )}
-    </nav>
+
+        {open && (
+          <div className="lg:hidden bg-background border-t border-border/30 pb-4">
+            {links.map((l) => (
+              <button
+                key={l.href}
+                onClick={() => scrollTo(l.href)}
+                className="block w-full text-left px-6 py-3 text-foreground font-semibold hover:bg-accent/10 hover:text-accent transition-colors"
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </nav>
+    </>
   );
 };
 
