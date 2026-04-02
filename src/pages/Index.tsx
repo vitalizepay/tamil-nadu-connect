@@ -7,12 +7,9 @@ import ServicesSection from "@/components/ServicesSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import GallerySection from "@/components/GallerySection";
 import RegistrationForm from "@/components/RegistrationForm";
-
 import SocialSection from "@/components/SocialSection";
-import ComplaintForm from "@/components/ComplaintForm";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
 
 const Index = () => (
   <LanguageProvider>
@@ -25,12 +22,9 @@ const Index = () => (
       <AchievementsSection />
       <GallerySection />
       <RegistrationForm />
-      
       <SocialSection />
-      <ComplaintForm />
       <ContactSection />
       <Footer />
-      <FloatingButtons />
     </div>
   </LanguageProvider>
 );
