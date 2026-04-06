@@ -46,58 +46,60 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-background to-secondary/5" />
       <div className="absolute top-32 right-20 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-32 left-20 w-72 h-72 bg-secondary/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }} />
-      <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "0.8s" }} />
 
-      <div className="relative z-10 w-full px-4 md:px-8 max-w-4xl mx-auto text-center mt-24 md:mt-28 mb-16">
-        {/* Banner */}
-        <div className="mb-8 animate-fade-in-up">
-          <div className="inline-block rounded-2xl overflow-hidden border-2 border-accent/20 shadow-[0_10px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.15)] transition-shadow duration-500 max-w-2xl w-full">
-            <img src={partyBanner} alt="MJMK Party Banner" className="w-full h-auto" loading="eager" />
-          </div>
-        </div>
-
-        {/* Title */}
-        <div className="animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-accent leading-tight mb-3">
+      <div className="relative z-10 w-full px-4 md:px-8 max-w-5xl mx-auto mt-24 md:mt-28 mb-16">
+        {/* Text first on top */}
+        <div className="text-center mb-8 animate-fade-in-up">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-accent leading-tight mb-2">
             {c.title}
           </h1>
-          <p className="text-lg md:text-2xl font-bold text-primary mb-2">{c.subtitle}</p>
-          <p className="text-base md:text-lg font-semibold text-secondary mb-4 tracking-widest">{c.tagline}</p>
+          <p className="text-sm md:text-base font-bold text-primary mb-1">{c.subtitle}</p>
+          <p className="text-xs md:text-sm font-semibold text-secondary tracking-widest">{c.tagline}</p>
         </div>
 
-        {/* Years badge */}
-        <div className="animate-fade-in-up mb-6" style={{ animationDelay: "0.3s" }}>
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/10 border border-accent/20">
-            <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse" />
-            <span className="text-sm md:text-base font-bold text-accent">{c.years}</span>
+        {/* Banner aligned left */}
+        <div className="flex flex-col md:flex-row items-start gap-8 animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
+          <div className="md:w-1/2 w-full flex-shrink-0">
+            <div className="rounded-2xl overflow-hidden border-2 border-accent/20 shadow-[0_10px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.15)] transition-shadow duration-500">
+              <img src={partyBanner} alt="MJMK Party Banner" className="w-full h-auto" loading="eager" />
+            </div>
           </div>
-        </div>
 
-        {/* Description */}
-        <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto">
-            {c.description}
-          </p>
-        </div>
+          {/* Right side content */}
+          <div className="md:w-1/2 w-full space-y-4">
+            {/* Years badge */}
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
+                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                <span className="text-xs md:text-sm font-bold text-accent">{c.years}</span>
+              </div>
+            </div>
 
-        {/* Mission & Vision cards */}
-        <div className="grid sm:grid-cols-2 gap-6 animate-fade-in-up max-w-3xl mx-auto" style={{ animationDelay: "0.5s" }}>
-          <div className="p-6 rounded-2xl bg-card border border-border/50 shadow-card hover:shadow-strong hover:-translate-y-1 transition-all duration-300 text-left">
-            <div className="w-10 h-1 bg-primary rounded-full mb-3" />
-            <h3 className="text-lg font-black text-primary mb-2">{c.mission}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{c.missionText}</p>
-          </div>
-          <div className="p-6 rounded-2xl bg-card border border-border/50 shadow-card hover:shadow-strong hover:-translate-y-1 transition-all duration-300 text-left">
-            <div className="w-10 h-1 bg-secondary rounded-full mb-3" />
-            <h3 className="text-lg font-black text-secondary mb-2">{c.vision}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{c.visionText}</p>
+            {/* Description */}
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+              {c.description}
+            </p>
+
+            {/* Mission & Vision cards */}
+            <div className="space-y-4">
+              <div className="p-4 rounded-xl bg-card border border-border/50 shadow-card hover:shadow-strong hover:-translate-y-0.5 transition-all duration-300">
+                <div className="w-8 h-0.5 bg-primary rounded-full mb-2" />
+                <h3 className="text-sm font-black text-primary mb-1">{c.mission}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{c.missionText}</p>
+              </div>
+              <div className="p-4 rounded-xl bg-card border border-border/50 shadow-card hover:shadow-strong hover:-translate-y-0.5 transition-all duration-300">
+                <div className="w-8 h-0.5 bg-secondary rounded-full mb-2" />
+                <h3 className="text-sm font-black text-secondary mb-1">{c.vision}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{c.visionText}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Ticker */}
-      <div className="absolute bottom-0 left-0 right-0 bg-accent/90 py-3 overflow-hidden backdrop-blur-sm">
-        <div className="animate-ticker whitespace-nowrap text-accent-foreground font-bold text-lg">
+      <div className="absolute bottom-0 left-0 right-0 bg-accent/90 py-2.5 overflow-hidden backdrop-blur-sm">
+        <div className="animate-ticker whitespace-nowrap text-accent-foreground font-bold text-sm">
           {c.ticker}
         </div>
       </div>
