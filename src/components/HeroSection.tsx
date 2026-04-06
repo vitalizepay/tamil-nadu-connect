@@ -7,14 +7,14 @@ const t = {
     subtitle: "MAKKAL JANANAYAKA MUNNETRA KAZHAGAM (MJMK)",
     tagline: "மக்கள் நலன் • சமூக நீதி • முன்னேற்றம்",
     description:
-      "மக்கள் ஜனநாயக முன்னேற்ற கழகம் (MJMK) என்பது சமத்துவம், வெளிப்படைத்தன்மை மற்றும் நிலையான வளர்ச்சி மூலம் சமூகத்தை மேம்படுத்த அர்ப்பணிக்கப்பட்ட மக்கள் சார்ந்த அரசியல் இயக்கமாகும். 9+ ஆண்டுகளாக அடிமட்ட அளவில் குடிமக்களை மேம்படுத்தவும் ஜனநாயக மதிப்புகளை பாதுகாக்கவும் செயல்பட்டு வருகிறது.",
-    years: "9+ ஆண்டுகளாக மக்கள் சேவையில்",
+      "மக்கள் ஜனநாயக முன்னேற்ற கழகம் (MJMK) என்பது 2018 ஆம் ஆண்டு நிறுவப்பட்ட, திருப்பூரை தலைமையகமாகக் கொண்ட மக்கள் சார்ந்த அரசியல் இயக்கமாகும். சாதாரண மக்களின் உரிமைகளைப் பாதுகாக்கவும், சமூக நீதியை நிலைநாட்டவும், வெளிப்படையான ஆட்சியை உறுதி செய்யவும் தீவிரமாகச் செயல்பட்டு வருகிறது.",
+    years: "2018 முதல் மக்கள் சேவையில்",
     mission: "எங்கள் நோக்கம்",
     missionText:
-      "ஒவ்வொரு குடிமகனும் மரியாதையுடனும் சமத்துவத்துடனும் வாழ வேண்டும் என்பதே எங்கள் உறுதியான நம்பிக்கை. வங்கி வசூல் துன்புறுத்தல்களுக்கு எதிராகவும், சமூக அநீதிகளுக்கு எதிராகவும் தொடர்ந்து போராடி வருகிறோம்.",
+      "தனியார் நிதி நிறுவனங்கள் மற்றும் மைக்ரோ லோன் ஆப்களின் சட்டவிரோத வசூல் முறைகளுக்கு எதிராகப் போராடுதல், தொழிலாளர் மற்றும் நுகர்வோர் உரிமைகளைப் பாதுகாத்தல், வகுப்புவாத நல்லிணக்கம் மற்றும் மதச்சார்பின்மையை நிலைநாட்டுதல் ஆகியவை எங்கள் முக்கிய நோக்கங்கள்.",
     vision: "எங்கள் பார்வை",
     visionText:
-      "தமிழ்நாட்டில் ஒரு நியாயமான, வெளிப்படையான மற்றும் மக்கள் நலன் சார்ந்த ஆட்சி அமைப்பை உருவாக்குவதே எங்கள் இலக்கு. அடிமட்ட மக்களின் குரலை ஆட்சியில் எதிரொலிக்கச் செய்வோம்.",
+      "MJMK சமூக பொது நல அறக்கட்டளை மூலம் கல்வி உதவி, நலத்திட்டப் பொருட்கள் மற்றும் சமூக நலன் சார்ந்த உதவிகளை திருப்பூர் மக்களுக்கு வழங்கி வருகிறது. அடிமட்ட மக்களின் குரலை ஆட்சியில் எதிரொலிக்கச் செய்வோம்.",
     ticker:
       "★ மக்களுக்காக \u00a0•\u00a0 நீதிக்காக \u00a0•\u00a0 நியாயத்திற்காக \u00a0★\u00a0 மக்கள் சேவை \u00a0•\u00a0 மனித உரிமை \u00a0•\u00a0 நியாயம் \u00a0★\u00a0 மக்களுக்காக \u00a0•\u00a0 நீதிக்காக \u00a0•\u00a0 நியாயத்திற்காக ★",
   },
@@ -23,14 +23,14 @@ const t = {
     subtitle: "MJMK - People's Democratic Progressive Party",
     tagline: "People's Welfare • Social Justice • Progress",
     description:
-      "Makkal Jananayaka Munnetra Kazhagam (MJMK) is a people-driven political movement committed to uplifting society through equality, transparency, and sustainable development. With over 9 years of service, the party works at grassroots level to empower citizens and protect democratic values.",
-    years: "9+ Years in Public Service",
+      "Makkal Jananayaka Munnetra Kazhagam (MJMK) is a people-driven political movement founded in 2018, headquartered at Ramu Colony, Thiruneelakandapuram, Tirupur. Unlike larger state parties, MJMK operates with a strong focus on social activism, local labor rights, and consumer protection across the Tirupur region.",
+    years: "Serving the People Since 2018",
     mission: "Our Mission",
     missionText:
-      "We firmly believe that every citizen deserves to live with dignity and equality. We continue to fight against banking recovery harassment and social injustice across Tamil Nadu.",
+      "We actively protest against private finance companies and micro-loan apps that use illegal or forceful debt collection methods. We champion communal harmony, secularism, and stand as vocal critics of policies that harm the common people.",
     vision: "Our Vision",
     visionText:
-      "To build a just, transparent, and people-centric governance system in Tamil Nadu. We aim to amplify the voices of grassroots communities in governance and policy-making.",
+      "Through the MJMK Social Public Welfare Trust, we provide educational support, welfare materials, and community aid to the people of Tirupur. Our goal is to amplify grassroots voices in governance and build a just, transparent society.",
     ticker:
       "★ For the People \u00a0•\u00a0 For Justice \u00a0•\u00a0 For Fairness \u00a0★\u00a0 Public Service \u00a0•\u00a0 Human Rights \u00a0•\u00a0 Justice \u00a0★\u00a0 For the People \u00a0•\u00a0 For Justice \u00a0•\u00a0 For Fairness ★",
   },

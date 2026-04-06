@@ -14,7 +14,7 @@ const t = {
     title: "நிறுவனர் & தலைவர்",
     name: "எஸ்.இப்ராஹீம்பாதுஷா",
     role: "நிறுவனர் & தலைவர் – MJMK",
-    desc: "மக்கள் ஜனநாயக முன்னேற்ற கழகத்தின் நிறுவனர் மற்றும் தலைவர். தமிழ்நாடு மக்களின் உரிமைக்காகவும் நீதிக்காகவும் 9+ ஆண்டுகளாக போராடும் தலைவர்.",
+    desc: "மக்கள் ஜனநாயக முன்னேற்ற கழகத்தின் நிறுவனர் மற்றும் தலைவர். 2018 ஆம் ஆண்டு முதல் திருப்பூரில் சாதாரண மக்களின் உரிமைகளுக்காகவும், சட்டவிரோத கடன் வசூல்களுக்கு எதிராகவும், சமூக நீதிக்காகவும் தீவிரமாகப் போராடி வரும் தலைவர்.",
     quote: "\"மக்களின் உரிமைக்காக போராடும் தலைவர்\"",
     teamTitle: "கழக நிர்வாகிகள்",
     leaders: [
@@ -30,9 +30,9 @@ const t = {
   },
   en: {
     title: "Founder & President",
-    name: "S. Ibrahiem Bhathusha",
-    role: "Founder & President – MJMK",
-    desc: "Founder and President of Makkal Jananayaka Munnetra Kazhagam. A dedicated Tamil Nadu political leader fighting for justice & equality for over 9+ years.",
+    name: "S. Ibrahim Badusha",
+    role: "Founder-President – MJMK",
+    desc: "Founder and President of Makkal Jananayaka Munnetra Kazhagam, headquartered in Tirupur. Since 2018, he has been actively fighting against illegal debt recovery practices, championing labor and consumer rights, and promoting communal harmony across Tamil Nadu.",
     quote: "\"A leader who fights for the rights of the people\"",
     teamTitle: "Party Office Bearers",
     leaders: [
