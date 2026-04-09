@@ -1,4 +1,5 @@
 import partyBanner from "@/assets/party-banner.png";
+import teamGroup from "@/assets/team-group.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const t = {
@@ -94,6 +95,13 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Team group photo */}
+      <div className="relative z-10 w-full px-4 md:px-8 max-w-5xl mx-auto mb-20">
+        <div className="rounded-2xl overflow-hidden border-2 border-accent/20 shadow-[0_10px_40px_rgba(0,0,0,0.1)]">
+          <img src={teamGroup} alt="MJMK Team" className="w-full h-auto" loading="eager" />
         </div>
       </div>
 
