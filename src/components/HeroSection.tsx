@@ -45,7 +45,7 @@ const HeroSection = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Team group background image */}
       <div className="absolute inset-0 z-0">
-        <img src={teamGroup} alt="" className="w-full h-full object-cover opacity-15" />
+        <img src={teamGroup} alt="" className="w-full h-full object-cover opacity-30" />
       </div>
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70 z-[1]" />
