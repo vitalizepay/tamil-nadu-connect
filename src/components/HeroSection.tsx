@@ -43,10 +43,14 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      {/* Team group background image */}
+      <div className="absolute inset-0 z-0">
+        <img src={teamGroup} alt="" className="w-full h-full object-cover opacity-10" />
+      </div>
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-background to-secondary/5" />
-      <div className="absolute top-32 right-20 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-32 left-20 w-72 h-72 bg-secondary/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1.5s" }} />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70 z-[1]" />
+      <div className="absolute top-32 right-20 w-80 h-80 bg-accent/8 rounded-full blur-3xl animate-pulse z-[1]" />
+      <div className="absolute bottom-32 left-20 w-72 h-72 bg-secondary/8 rounded-full blur-3xl animate-pulse z-[1]" style={{ animationDelay: "1.5s" }} />
 
       <div className="relative z-10 w-full px-4 md:px-8 max-w-5xl mx-auto mt-24 md:mt-28 mb-16">
         {/* Text first on top */}
@@ -98,15 +102,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Team group photo */}
-      <div className="relative z-10 w-full px-4 md:px-8 max-w-5xl mx-auto mb-20">
-        <div className="rounded-2xl overflow-hidden border-2 border-accent/20 shadow-[0_10px_40px_rgba(0,0,0,0.1)]">
-          <img src={teamGroup} alt="MJMK Team" className="w-full h-auto" loading="eager" />
-        </div>
-      </div>
-
       {/* Ticker */}
-      <div className="absolute bottom-0 left-0 right-0 bg-accent/90 py-2.5 overflow-hidden backdrop-blur-sm">
+      <div className="absolute bottom-0 left-0 right-0 bg-accent/90 py-2.5 overflow-hidden backdrop-blur-sm z-20">
         <div className="animate-ticker whitespace-nowrap text-accent-foreground font-bold text-sm">
           {c.ticker}
         </div>
