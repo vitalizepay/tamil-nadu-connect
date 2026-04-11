@@ -8,7 +8,7 @@ import galleryRally from "@/assets/gallery-rally.jpg";
 import galleryHonor from "@/assets/gallery-honor.jpg";
 import galleryNews from "@/assets/gallery-news.jpg";
 import galleryTeam from "@/assets/gallery-team.jpg";
-import galleryNews2 from "@/assets/gallery-news2.jpg";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const t = {

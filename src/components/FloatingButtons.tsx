@@ -1,41 +1,34 @@
-import { Facebook, MessageCircle, Phone, Twitter } from "lucide-react";
+import { Facebook, Instagram, MessageCircle, Youtube } from "lucide-react";
 
 const FloatingButtons = () => (
-  <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+  <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
     <a
       href="https://www.facebook.com/mjmkofficial/"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-14 h-14 rounded-full bg-[#1877F2] text-white flex items-center justify-center shadow-strong hover:scale-110 transition-transform"
+      className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
       title="Facebook"
     >
-      <Facebook size={24} />
+      <Facebook size={22} className="text-[#1877F2]" />
     </a>
-    <a
-      href="https://x.com/MJMKforPEOPLE"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-14 h-14 rounded-full bg-foreground text-background flex items-center justify-center shadow-strong hover:scale-110 transition-transform"
-      title="Twitter / X"
+    <span
+      className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center"
+      title="Instagram"
     >
-      <Twitter size={24} />
-    </a>
-    <a
-      href="tel:+91XXXXXXXXXX"
-      className="w-14 h-14 rounded-full bg-accent text-accent-foreground flex items-center justify-center shadow-strong hover:scale-110 transition-transform"
-      title="Call Now"
-    >
-      <Phone size={24} />
-    </a>
-    <a
-      href="https://wa.me/91XXXXXXXXXX"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-14 h-14 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center shadow-strong hover:scale-110 transition-transform"
+      <Instagram size={22} className="text-[#E4405F]" />
+    </span>
+    <span
+      className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center"
       title="WhatsApp"
     >
-      <MessageCircle size={24} />
-    </a>
+      <MessageCircle size={22} className="text-[#25D366]" />
+    </span>
+    <span
+      className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center"
+      title="YouTube"
+    >
+      <Youtube size={22} className="text-[#FF0000]" />
+    </span>
   </div>
 );
 
