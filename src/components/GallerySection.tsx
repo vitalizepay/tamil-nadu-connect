@@ -8,7 +8,7 @@ import galleryRally from "@/assets/gallery-rally.jpg";
 import galleryHonor from "@/assets/gallery-honor.jpg";
 import galleryNews from "@/assets/gallery-news.jpg";
 import galleryTeam from "@/assets/gallery-team.jpg";
-import galleryNews2 from "@/assets/gallery-news2.jpg";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const t = {
@@ -25,7 +25,7 @@ const t = {
       { src: galleryHonor, label: "பாராட்டு விழா" },
       { src: galleryNews, label: "செய்தி ஊடகம்" },
       { src: galleryTeam, label: "அணி நடவடிக்கை" },
-      { src: galleryNews2, label: "செய்தித்தாள் செய்தி" },
+      
     ],
   },
   en: {
@@ -41,7 +41,7 @@ const t = {
       { src: galleryHonor, label: "Felicitation" },
       { src: galleryNews, label: "News Coverage" },
       { src: galleryTeam, label: "Team Activity" },
-      { src: galleryNews2, label: "Newspaper Feature" },
+      
     ],
   },
 };
