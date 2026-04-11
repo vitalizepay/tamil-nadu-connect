@@ -53,6 +53,7 @@ const FounderSection = () => {
   const c = t[lang];
 
   return (
+    <>
     <section id="founder" className="py-20 gradient-hero">
       <div className="container mx-auto px-4">
         {/* Founder */}
@@ -99,6 +100,7 @@ const FounderSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
