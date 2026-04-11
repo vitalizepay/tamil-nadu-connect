@@ -69,21 +69,31 @@ const FounderSection = () => {
             <p className="text-2xl font-black text-mjmk-cyan italic">{c.quote}</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        {/* Team Leaders */}
-        <h2 className="text-3xl md:text-4xl font-black text-center text-primary-foreground mt-20 mb-4">{c.teamTitle}</h2>
+    {/* Team Leaders - White background section */}
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-black text-center text-foreground mb-4">{c.teamTitle}</h2>
         <div className="w-24 h-1 bg-mjmk-cyan mx-auto mb-10 rounded-full" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {c.leaders.map((leader, i) => (
             <div
               key={i}
-              className="flex flex-col items-center bg-background/10 backdrop-blur-sm rounded-2xl p-6 border border-mjmk-cyan/30 hover:border-mjmk-cyan transition-all duration-300 hover:scale-105"
+              className="group flex flex-col items-center bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+              style={{ animationDelay: `${i * 100}ms` }}
             >
-              <div className="w-36 h-36 rounded-full border-4 border-mjmk-cyan shadow-strong overflow-hidden mb-4">
-                <img src={leader.img} alt={leader.name} className="w-full h-full object-cover object-top" />
+              <div className="relative w-36 h-36 rounded-full border-4 border-secondary shadow-lg overflow-hidden mb-4 group-hover:border-mjmk-cyan transition-colors duration-500">
+                <img
+                  src={leader.img}
+                  alt={leader.name}
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 rounded-full border-4 border-transparent group-hover:border-secondary/40 transition-all duration-500 group-hover:scale-110" />
               </div>
-              <h3 className="text-lg font-black text-primary-foreground text-center mb-2">{leader.name}</h3>
-              <p className="text-mjmk-cyan font-bold text-xs text-center">{leader.role}</p>
+              <h3 className="text-lg font-black text-foreground text-center mb-2 group-hover:text-secondary transition-colors duration-300">{leader.name}</h3>
+              <p className="text-secondary font-bold text-xs text-center">{leader.role}</p>
             </div>
           ))}
         </div>

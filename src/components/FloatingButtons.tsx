@@ -7,7 +7,16 @@ const FloatingButtons = () => (
       target="_blank"
       rel="noopener noreferrer"
       className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
-      title="Facebook"
+      title="Facebook - MJMK Official"
+    >
+      <Facebook size={22} className="text-[#1877F2]" />
+    </a>
+    <a
+      href="https://www.facebook.com/winstarsapparels/reels/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
+      title="Facebook - Reels"
     >
       <Facebook size={22} className="text-[#1877F2]" />
     </a>
