@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Facebook, Twitter } from "lucide-react";
 import logo from "@/assets/mjmk-logo.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -47,10 +47,32 @@ const Navbar = () => {
 
       <nav className="fixed top-1.5 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50 shadow-sm">
         <div className="container mx-auto flex items-center justify-between px-4 py-2">
-          <button onClick={() => scrollTo("#hero")} className="flex items-center gap-2">
-            <img src={logo} alt="MJMK Logo" className="h-11 w-11 rounded-full border-2 border-accent" />
-            <span className="text-lg font-black text-accent hidden sm:block">MJMK</span>
-          </button>
+          <div className="flex items-center gap-3">
+            <button onClick={() => scrollTo("#hero")} className="flex items-center gap-2">
+              <img src={logo} alt="MJMK Logo" className="h-11 w-11 rounded-full border-2 border-accent" />
+              <span className="text-lg font-black text-accent hidden sm:block">MJMK</span>
+            </button>
+            <div className="flex items-center gap-2 ml-1">
+              <a
+                href="https://www.facebook.com/mjmkofficial/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Facebook"
+                className="w-8 h-8 rounded-full bg-white shadow flex items-center justify-center hover:scale-110 transition-transform"
+              >
+                <Facebook size={16} className="text-[#1877F2]" />
+              </a>
+              <a
+                href="https://x.com/MJMKforPEOPLE"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Twitter / X"
+                className="w-8 h-8 rounded-full bg-foreground shadow flex items-center justify-center hover:scale-110 transition-transform"
+              >
+                <Twitter size={16} className="text-background" />
+              </a>
+            </div>
+          </div>
 
           <div className="hidden lg:flex items-center gap-1">
             {links.map((l) => (
