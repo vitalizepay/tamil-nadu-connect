@@ -93,6 +93,7 @@ const RegistrationForm = () => {
     }
     setSubmitted(true);
     toast({ title: c.success });
+    setTimeout(() => navigate("/bearers"), 1200);
   };
 
   const update = (field: string, value: string) => setForm(p => ({ ...p, [field]: value }));
