@@ -69,6 +69,22 @@ const Admin = () => {
     setCompData(prev => prev.map(c => c.id === id ? { ...c, status } : c));
   };
 
+  const openProof = async (pathOrUrl: string) => {
+    // Backward compatibility: older rows may contain a full public URL.
+    if (/^https?:\/\//i.test(pathOrUrl)) {
+      window.open(pathOrUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+    const { data, error } = await supabase.storage
+      .from("complaint-proofs")
+      .createSignedUrl(pathOrUrl, 60 * 5);
+    if (error || !data?.signedUrl) {
+      alert("Unable to open file. You may need to sign in.");
+      return;
+    }
+    window.open(data.signedUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <header className="gradient-hero py-4 px-6 flex items-center justify-between">
@@ -171,7 +187,7 @@ const Admin = () => {
                       <td className="px-4 py-3 text-sm text-foreground">{c.complaint_type}</td>
                       <td className="px-4 py-3 text-sm">
                         {c.file_url ? (
-                          <a href={c.file_url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-semibold">View</a>
+                          <button onClick={() => openProof(c.file_url!)} className="text-accent hover:underline font-semibold">View</button>
                         ) : "-"}
                       </td>
                       <td className="px-4 py-3">

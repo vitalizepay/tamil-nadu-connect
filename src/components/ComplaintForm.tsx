@@ -128,10 +128,8 @@ const ComplaintForm = () => {
           .from("complaint-proofs")
           .upload(path, file);
         if (uploadErr) throw uploadErr;
-        const { data: urlData } = supabase.storage
-          .from("complaint-proofs")
-          .getPublicUrl(path);
-        fileUrl = urlData.publicUrl;
+        // Store the storage path; signed URLs are generated on demand by admins.
+        fileUrl = path;
       }
 
       const cid = generateComplaintId();
