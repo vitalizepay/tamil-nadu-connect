@@ -187,7 +187,7 @@ const Admin = () => {
                       <td className="px-4 py-3 text-sm text-foreground">{c.complaint_type}</td>
                       <td className="px-4 py-3 text-sm">
                         {c.file_url ? (
-                          <a href={c.file_url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-semibold">View</a>
+                          <button onClick={() => openProof(c.file_url!)} className="text-accent hover:underline font-semibold">View</button>
                         ) : "-"}
                       </td>
                       <td className="px-4 py-3">
