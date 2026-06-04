@@ -53,14 +53,23 @@ const Navbar = () => {
           </button>
 
           <div className="hidden lg:flex items-center gap-1">
-            {links.map((l) => (
-              <button
-                key={l.href}
-                onClick={() => scrollTo(l.href)}
-                className="px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
-              >
-                {l.label}
-              </button>
+            {links.map((l, idx) => (
+              <span key={l.href} className="flex items-center gap-1">
+                <button
+                  onClick={() => scrollTo(l.href)}
+                  className="px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
+                >
+                  {l.label}
+                </button>
+                {idx === 0 && (
+                  <a
+                    href="/bearers"
+                    className="px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
+                  >
+                    {lang === "ta" ? "நிர்வாகிகள்" : "Bearers"}
+                  </a>
+                )}
+              </span>
             ))}
             <button
               onClick={toggle}
