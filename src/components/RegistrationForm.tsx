@@ -61,6 +61,7 @@ const t = {
 
 const RegistrationForm = () => {
   const { lang } = useLanguage();
+  const navigate = useNavigate();
   const c = t[lang];
   const [form, setForm] = useState({
     name: "", mobile: "", district: "", address: "", age: "", occupation: "", email: "", interest: "Supporter"
