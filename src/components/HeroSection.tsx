@@ -1,5 +1,6 @@
 import partyBanner from "@/assets/party-banner.png";
 import teamGroup from "@/assets/team-group.png";
+import bearersGroup from "@/assets/bearers-group.png.asset.json";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const t = {
@@ -43,9 +44,10 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      {/* Team group background image */}
+      {/* Crossfading background images */}
       <div className="absolute inset-0 z-0">
-        <img src={teamGroup} alt="" className="w-full h-full object-cover opacity-30" />
+        <img src={teamGroup} alt="" className="absolute inset-0 w-full h-full object-cover animate-bg-a" />
+        <img src={bearersGroup.url} alt="" className="absolute inset-0 w-full h-full object-cover animate-bg-b" />
       </div>
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70 z-[1]" />

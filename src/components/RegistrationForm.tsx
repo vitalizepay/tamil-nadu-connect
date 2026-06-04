@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -60,6 +61,7 @@ const t = {
 
 const RegistrationForm = () => {
   const { lang } = useLanguage();
+  const navigate = useNavigate();
   const c = t[lang];
   const [form, setForm] = useState({
     name: "", mobile: "", district: "", address: "", age: "", occupation: "", email: "", interest: "Supporter"
@@ -91,6 +93,7 @@ const RegistrationForm = () => {
     }
     setSubmitted(true);
     toast({ title: c.success });
+    setTimeout(() => navigate("/bearers"), 1200);
   };
 
   const update = (field: string, value: string) => setForm(p => ({ ...p, [field]: value }));
