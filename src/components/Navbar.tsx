@@ -104,6 +104,12 @@ const Navbar = () => {
                 {l.label}
               </button>
             ))}
+            <a
+              href="/bearers"
+              className="block w-full text-left px-6 py-3 text-foreground font-semibold hover:bg-accent/10 hover:text-accent transition-colors"
+            >
+              {lang === "ta" ? "நிர்வாகிகள்" : "Bearers"}
+            </a>
           </div>
         )}
       </nav>
