@@ -1,5 +1,6 @@
 import partyBanner from "@/assets/party-banner.png";
 import teamGroup from "@/assets/team-group.png";
+import bearersGroup from "@/assets/bearers-group.png.asset.json";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const t = {
