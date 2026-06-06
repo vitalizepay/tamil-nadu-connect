@@ -10,6 +10,7 @@ import RegistrationForm from "@/components/RegistrationForm";
 import SocialSection from "@/components/SocialSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import PartyRegistrationSection from "@/components/PartyRegistrationSection";
 
 const Index = () => (
   <LanguageProvider>
@@ -24,6 +25,7 @@ const Index = () => (
       <RegistrationForm />
       <SocialSection />
       <ContactSection />
+      <PartyRegistrationSection />
       <Footer />
     </div>
   </LanguageProvider>
