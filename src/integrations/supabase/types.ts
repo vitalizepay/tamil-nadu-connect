@@ -59,6 +59,39 @@ export type Database = {
         }
         Relationships: []
       }
+      party_registrations: {
+        Row: {
+          address: string | null
+          created_at: string
+          date_of_birth: string
+          designation: string
+          full_name: string
+          id: string
+          location: string
+          mobile_number: string
+        }
+        Insert: {
+          address?: string | null
+          created_at?: string
+          date_of_birth: string
+          designation: string
+          full_name: string
+          id?: string
+          location: string
+          mobile_number: string
+        }
+        Update: {
+          address?: string | null
+          created_at?: string
+          date_of_birth?: string
+          designation?: string
+          full_name?: string
+          id?: string
+          location?: string
+          mobile_number?: string
+        }
+        Relationships: []
+      }
       registrations: {
         Row: {
           address: string | null

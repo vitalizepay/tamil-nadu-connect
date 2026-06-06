@@ -8,6 +8,7 @@ import Admin from "./pages/Admin.tsx";
 import Ads from "./pages/Ads.tsx";
 import Bearers from "./pages/Bearers.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import PartyRegistration from "./pages/PartyRegistration.tsx";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,8 @@ const App = () => (
           <Route path="/admin" element={<Admin />} />
           <Route path="/ads" element={<Ads />} />
           <Route path="/bearers" element={<Bearers />} />
+          <Route path="/bearers_registration" element={<PartyRegistration />} />
+          <Route path="/party-registration" element={<PartyRegistration />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
