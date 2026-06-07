@@ -282,33 +282,26 @@ const PartyRegistrationSection = () => {
               </div>
 
               <div className="space-y-2">
-                <Label>
+                <Label htmlFor="location">
                   Location <span className="text-destructive">*</span>
                 </Label>
-                <Select
+                <Input
+                  id="location"
                   value={form.location}
-                  onValueChange={(v) => set("location", v)}
-                >
-                  <SelectTrigger
-                    className={cn(errors.location && "border-destructive")}
-                  >
-                    <SelectValue placeholder="Select location" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {LOCATIONS.map((l) => (
-                      <SelectItem key={l} value={l}>
-                        {l}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                  onChange={(e) => set("location", e.target.value)}
+                  maxLength={255}
+                  placeholder="Enter your location"
+                  className={cn(errors.location && "border-destructive")}
+                />
                 {errors.location && (
                   <p className="text-sm text-destructive">{errors.location}</p>
                 )}
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="address">Address</Label>
+                <Label htmlFor="address">
+                  Address <span className="text-destructive">*</span>
+                </Label>
                 <Textarea
                   id="address"
                   rows={3}
@@ -324,6 +317,7 @@ const PartyRegistrationSection = () => {
                   <p className="text-sm text-destructive">{errors.address}</p>
                 )}
               </div>
+
 
               <Button
                 type="submit"
