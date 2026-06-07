@@ -38,16 +38,6 @@ const DESIGNATIONS = [
   "செய்தி தொடர்பாளர்",
 ];
 
-const LOCATIONS = [
-  "Abu Dhabi",
-  "Dubai",
-  "Sharjah",
-  "Ajman",
-  "Umm Al Quwain",
-  "Ras Al Khaimah",
-  "Fujairah",
-  "Al Ain",
-];
 
 const schema = z.object({
   full_name: z.string().trim().min(1, "Full name is required").max(255),
