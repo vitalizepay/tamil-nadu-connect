@@ -67,7 +67,7 @@ const schema = z.object({
     .max(15, "Maximum 15 digits"),
   designation: z.string().min(1, "Designation is required"),
   location: z.string().min(1, "Location is required"),
-  address: z.string().max(500, "Maximum 500 characters").optional().or(z.literal("")),
+  address: z.string().trim().min(1, "Address is required").max(500, "Maximum 500 characters"),
 });
 
 type FormState = {
