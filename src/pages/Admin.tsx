@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import logo from "@/assets/mjmk-logo.png";
 import { Link } from "react-router-dom";
+import AdminAuthGate from "@/components/admin/AdminAuthGate";
+import MembersTab from "@/components/admin/MembersTab";
 
 interface Registration {
   id: string;
