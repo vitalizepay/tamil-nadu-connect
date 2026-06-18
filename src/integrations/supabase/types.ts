@@ -59,6 +59,102 @@ export type Database = {
         }
         Relationships: []
       }
+      members: {
+        Row: {
+          address: string | null
+          approved_at: string | null
+          approved_by: string | null
+          blood_group: string | null
+          created_at: string
+          designation: string | null
+          district: string | null
+          dob: string | null
+          email: string | null
+          father_name: string
+          full_name: string
+          gender: string | null
+          id: string
+          id_card_url: string | null
+          membership_number: string | null
+          membership_type: string | null
+          mobile_number: string
+          photo_url: string | null
+          qr_code_url: string | null
+          referral_mobile: string | null
+          referral_name: string | null
+          state: string | null
+          status: Database["public"]["Enums"]["member_status"]
+          taluk: string | null
+          updated_at: string
+          village: string | null
+          voter_id_number: string
+          voter_id_url: string | null
+          whatsapp_number: string | null
+        }
+        Insert: {
+          address?: string | null
+          approved_at?: string | null
+          approved_by?: string | null
+          blood_group?: string | null
+          created_at?: string
+          designation?: string | null
+          district?: string | null
+          dob?: string | null
+          email?: string | null
+          father_name: string
+          full_name: string
+          gender?: string | null
+          id?: string
+          id_card_url?: string | null
+          membership_number?: string | null
+          membership_type?: string | null
+          mobile_number: string
+          photo_url?: string | null
+          qr_code_url?: string | null
+          referral_mobile?: string | null
+          referral_name?: string | null
+          state?: string | null
+          status?: Database["public"]["Enums"]["member_status"]
+          taluk?: string | null
+          updated_at?: string
+          village?: string | null
+          voter_id_number: string
+          voter_id_url?: string | null
+          whatsapp_number?: string | null
+        }
+        Update: {
+          address?: string | null
+          approved_at?: string | null
+          approved_by?: string | null
+          blood_group?: string | null
+          created_at?: string
+          designation?: string | null
+          district?: string | null
+          dob?: string | null
+          email?: string | null
+          father_name?: string
+          full_name?: string
+          gender?: string | null
+          id?: string
+          id_card_url?: string | null
+          membership_number?: string | null
+          membership_type?: string | null
+          mobile_number?: string
+          photo_url?: string | null
+          qr_code_url?: string | null
+          referral_mobile?: string | null
+          referral_name?: string | null
+          state?: string | null
+          status?: Database["public"]["Enums"]["member_status"]
+          taluk?: string | null
+          updated_at?: string
+          village?: string | null
+          voter_id_number?: string
+          voter_id_url?: string | null
+          whatsapp_number?: string | null
+        }
+        Relationships: []
+      }
       party_registrations: {
         Row: {
           address: string | null
@@ -131,15 +227,73 @@ export type Database = {
         }
         Relationships: []
       }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
-      [_ in never]: never
+      public_members: {
+        Row: {
+          approved_at: string | null
+          blood_group: string | null
+          designation: string | null
+          district: string | null
+          full_name: string | null
+          membership_number: string | null
+          photo_url: string | null
+        }
+        Insert: {
+          approved_at?: string | null
+          blood_group?: string | null
+          designation?: string | null
+          district?: string | null
+          full_name?: string | null
+          membership_number?: string | null
+          photo_url?: string | null
+        }
+        Update: {
+          approved_at?: string | null
+          blood_group?: string | null
+          designation?: string | null
+          district?: string | null
+          full_name?: string | null
+          membership_number?: string | null
+          photo_url?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
-      [_ in never]: never
+      approve_member: { Args: { _member_id: string }; Returns: string }
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "moderator" | "user"
+      member_status: "Pending" | "Approved" | "Rejected" | "Suspended"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -266,6 +420,9 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "moderator", "user"],
+      member_status: ["Pending", "Approved", "Rejected", "Suspended"],
+    },
   },
 } as const
