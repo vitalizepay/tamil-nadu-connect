@@ -9,6 +9,8 @@ import Ads from "./pages/Ads.tsx";
 import Bearers from "./pages/Bearers.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import PartyRegistration from "./pages/PartyRegistration.tsx";
+import Register from "./pages/Register.tsx";
+import MemberVerify from "./pages/MemberVerify.tsx";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/bearers" element={<Bearers />} />
           <Route path="/bearers_registration" element={<PartyRegistration />} />
           <Route path="/party-registration" element={<PartyRegistration />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/member/:number" element={<MemberVerify />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
