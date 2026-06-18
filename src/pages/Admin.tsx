@@ -39,14 +39,15 @@ const statusColors: Record<string, string> = {
   Resolved: "bg-secondary/10 text-secondary",
 };
 
-const Admin = () => {
-  const [tab, setTab] = useState<"registrations" | "complaints">("registrations");
+const AdminInner = () => {
+  const [tab, setTab] = useState<"members" | "registrations" | "complaints">("members");
   const [regData, setRegData] = useState<Registration[]>([]);
   const [compData, setCompData] = useState<Complaint[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
+      if (tab === "members") { setLoading(false); return; }
       setLoading(true);
       if (tab === "registrations") {
         const { data: rows } = await supabase
@@ -54,7 +55,7 @@ const Admin = () => {
           .select("*")
           .order("created_at", { ascending: false });
         if (rows) setRegData(rows as Registration[]);
-      } else {
+      } else if (tab === "complaints") {
         const { data: rows } = await supabase
           .from("complaints")
           .select("*")
@@ -99,7 +100,13 @@ const Admin = () => {
 
       <div className="container mx-auto px-4 py-8">
         {/* Tabs */}
-        <div className="flex gap-2 mb-6">
+        <div className="flex flex-wrap gap-2 mb-6">
+          <button
+            onClick={() => setTab("members")}
+            className={`px-6 py-3 rounded-xl font-bold transition-all ${tab === "members" ? "bg-primary text-primary-foreground shadow-strong" : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
+          >
+            Members
+          </button>
           <button
             onClick={() => setTab("registrations")}
             className={`px-6 py-3 rounded-xl font-bold transition-all ${tab === "registrations" ? "bg-primary text-primary-foreground shadow-strong" : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
