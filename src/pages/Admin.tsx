@@ -121,7 +121,9 @@ const AdminInner = () => {
           </button>
         </div>
 
-        {loading ? (
+        {tab === "members" ? (
+          <MembersTab />
+        ) : loading ? (
           <p className="text-muted-foreground text-center py-10">Loading...</p>
         ) : tab === "registrations" ? (
           regData.length === 0 ? (
@@ -222,5 +224,11 @@ const AdminInner = () => {
     </div>
   );
 };
+
+const Admin = () => (
+  <AdminAuthGate>
+    <AdminInner />
+  </AdminAuthGate>
+);
 
 export default Admin;
