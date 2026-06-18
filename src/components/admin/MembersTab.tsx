@@ -54,7 +54,7 @@ const MembersTab = () => {
 
   const approve = async (m: Member) => {
     setBusyId(m.id);
-    const { data, error } = await supabase.rpc("approve_member" as never, { _member_id: m.id });
+    const { data, error } = await (supabase.rpc as any)("approve_member", { _member_id: m.id });
     setBusyId(null);
     if (error) { toast.error(error.message); return; }
     toast.success(`Approved — Membership: ${data}`);
@@ -63,7 +63,7 @@ const MembersTab = () => {
 
   const setStatus = async (m: Member, status: Member["status"]) => {
     setBusyId(m.id);
-    const { error } = await supabase.from("members" as never).update({ status }).eq("id", m.id);
+    const { error } = await (supabase.from("members") as any).update({ status }).eq("id", m.id);
     setBusyId(null);
     if (error) { toast.error(error.message); return; }
     toast.success(`Status set to ${status}`);
