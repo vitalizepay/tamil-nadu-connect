@@ -94,7 +94,7 @@ const Register = () => {
       if (photoUp.error) throw photoUp.error;
       if (voterUp.error) throw voterUp.error;
 
-      const { error } = await supabase.from("members").insert({
+      const { error } = await (supabase.from("members") as any).insert({
         ...parsed.data,
         whatsapp_number: parsed.data.whatsapp_number || null,
         email: parsed.data.email || null,
