@@ -62,12 +62,20 @@ const Navbar = () => {
                   {l.label}
                 </button>
                 {idx === 0 && (
-                  <a
-                    href="/bearers"
-                    className="px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
-                  >
-                    {lang === "ta" ? "நிர்வாகிகள்" : "Bearers"}
-                  </a>
+                  <>
+                    <a
+                      href="/bearers"
+                      className="px-3 py-2 text-sm font-semibold text-foreground/80 hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
+                    >
+                      {lang === "ta" ? "நிர்வாகிகள்" : "Bearers"}
+                    </a>
+                    <a
+                      href="/register"
+                      className="px-3 py-2 text-sm font-semibold text-primary hover:text-accent hover:bg-accent/10 rounded-lg transition-colors"
+                    >
+                      {lang === "ta" ? "உறுப்பினராக" : "Register"}
+                    </a>
+                  </>
                 )}
               </span>
             ))}
@@ -109,6 +117,12 @@ const Navbar = () => {
               className="block w-full text-left px-6 py-3 text-foreground font-semibold hover:bg-accent/10 hover:text-accent transition-colors"
             >
               {lang === "ta" ? "நிர்வாகிகள்" : "Bearers"}
+            </a>
+            <a
+              href="/register"
+              className="block w-full text-left px-6 py-3 text-primary font-bold hover:bg-accent/10 hover:text-accent transition-colors"
+            >
+              {lang === "ta" ? "உறுப்பினராக சேர" : "Register as Member"}
             </a>
           </div>
         )}
